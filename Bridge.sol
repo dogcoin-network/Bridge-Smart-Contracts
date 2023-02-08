@@ -1,5 +1,5 @@
 //SPDX-License-Identifier: MIT
-pragma solidity 0.8.17; 
+pragma solidity 0.8.18; 
 
 interface ERC20Essential 
 {
@@ -61,12 +61,14 @@ contract owned
 
 }
 
+
+
     
 //****************************************************************************//
 //---------------------        MAIN CODE STARTS HERE     ---------------------//
 //****************************************************************************//
     
-contract DogcoinBridge is owned {
+contract Bridge is owned {
     
     uint256 public orderID;
     uint256 public exraCoinRewards;   // if we give users extra coins to cover gas cost of some initial transactions.
@@ -137,4 +139,5 @@ contract DogcoinBridge is owned {
         exraCoinRewards = _exraCoinRewards;
         return "Extra coins rewards updated";
     }
+
 }
